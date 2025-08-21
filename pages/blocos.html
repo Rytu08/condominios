@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Blocos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/blocos.js"></script>
+</head>
+<body>
+    <header>Gestão de Condomínios</header>
+    <main>
+        <section class="card">
+            <h1>CADASTRO DE BLOCOS</h1>
+            <form id="form-bloco">
+                <label for="nome-bloco">Nome do Bloco:</label>
+                <input type="text" id="nome-bloco" name="nome-bloco" required>
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h1>BLOCOS CADASTRADOS</h1>
+
+            <input type="text" id="pesquisa" placeholder="Pesquisar..." />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-blocos"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

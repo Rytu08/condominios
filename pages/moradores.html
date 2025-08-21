@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Moradores</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/moradores.js"></script>
+</head>
+<body>
+    <header>Gestão de Condomínios</header>
+    <main>
+        <section class="card">
+            <h1>CADASTRO DE MORADORES</h1>
+            <form id="form-morador">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone">
+
+                <label for="apartamento">Apartamento:</label>
+                <select id="apartamento" name="apartamento" required></select>
+
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h1>MORADORES CADASTRADOS</h1>
+
+            <input type="text" id="pesquisa" placeholder="Pesquisar..." />
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Apartamento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-moradores"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,305 @@
+/* ==================================================
+   IMPORTAÇÃO DE FONTES
+================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* ==================================================
+   RESET E BASE
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ==================================================
+   CONTEÚDO PRINCIPAL
+================================================== */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+}
+
+/* ==================================================
+   CARDS
+================================================== */
+.card {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+h1, h2, h3 {
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* ==================================================
+   MENU PRINCIPAL: RÓTULO DE FUNCIONALIDADE
+================================================== */
+.menu-label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+}
+
+/* ==================================================
+   DASHBOARD
+================================================== */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.card-link {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  background-color: #f0f0f0;
+}
+
+.card-link span {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+/* ==================================================
+   FORMULÁRIOS GERAIS
+================================================== */
+form {
+  text-align: center;
+}
+
+form h2,
+form h3,
+form label {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+form button {
+  margin-top: 30px;
+  background-color: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* ==================================================
+   FORMULÁRIO: BLOCOS
+================================================== */
+#form-blocos {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ==================================================
+   FORMULÁRIO INLINE: BLOCOS
+================================================== */
+.form-inline {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.form-inline .form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-inline label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.form-inline input {
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-inline button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-inline button:hover {
+  background-color: #333;
+}
+
+/* ==================================================
+   TABELAS
+================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #111;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* ==================================================
+   BOTÕES DE AÇÃO EM TABELAS
+================================================== */
+table button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table button:hover {
+  background-color: #333;
+}
+
+/* ==================================================
+   BARRAS DE PESQUISA PADRONIZADAS
+================================================== */
+input[type="text"]#pesquisa {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+}

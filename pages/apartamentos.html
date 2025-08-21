@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Apartamentos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/apartamentos.js"></script>
+</head>
+<body>
+    <header>Gestão de Condomínios</header>
+    <main>
+        <section class="card">
+            <h1>CADASTRO DE APARTAMENTOS</h1>
+            <form id="form-apartamento">
+                <label for="numero">Número do Apartamento:</label>
+                <input type="text" id="numero" name="numero" required>
+
+                <label for="bloco">Bloco:</label>
+                <select id="bloco" name="bloco" required></select>
+
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h1>APARTAMENTOS CADASTRADOS</h1>
+
+            <input type="text" id="pesquisa" placeholder="Pesquisar..." />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Número</th>
+                        <th>Bloco</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-apartamentos"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

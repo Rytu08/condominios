@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Manutenções Realizadas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/manutencoes.js"></script>
+</head>
+<body>
+    <header>Gestão de Condomínios</header>
+    <main>
+        <section class="card">
+            <h1>REGISTRAR MANUTENÇÕES</h1>
+            <form id="form-manutencao">
+                <label for="tipo">Tipo de Manutenção:</label>
+                <select id="tipo" name="tipo" required></select>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="local">Local:</label>
+                <input type="text" id="local" name="local" required>
+
+                <button type="submit">REGISTRAR</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h1>MANUTENÇÕES REGISTRADAS</h1>
+
+            <input type="text" id="pesquisa" placeholder="Pesquisar..." />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Local</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-manutencoes"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
