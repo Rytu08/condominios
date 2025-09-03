@@ -1,6 +1,6 @@
 -- Criação do banco de dados
-CREATE DATABASE condominio;
-USE condominio;
+CREATE DATABASE condominios;
+USE condominios;
 
 -- Tabela de blocos
 CREATE TABLE blocos (
