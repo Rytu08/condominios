@@ -1,12 +1,24 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const connection = require('./db');
 
 const app = express();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Cadastrar morador com verificação de CPF duplicado
+// Servir arquivos estáticos corretamente
+app.use(express.static(path.join(__dirname, '..'))); // Serve index.html, css/, js/
+app.use('/pages', express.static(path.join(__dirname, '../pages'))); // Serve os HTMLs da pasta pages
+
+// Rota para página inicial
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
+// Rotas diretas da API
 app.post('/api/moradores', (req, res) => {
   const { nome, cpf, telefone, bloco_id } = req.body;
 
@@ -28,7 +40,6 @@ app.post('/api/moradores', (req, res) => {
   });
 });
 
-// Listar todos os moradores
 app.get('/api/moradores', (req, res) => {
   connection.query('SELECT * FROM moradores', (err, results) => {
     if (err) return res.status(500).json({ error: 'Erro ao buscar moradores' });
@@ -36,6 +47,15 @@ app.get('/api/moradores', (req, res) => {
   });
 });
 
+// Rotas externas
+app.use('/moradores', require('./routes/moradores'));
+app.use('/blocos', require('./routes/blocos'));
+app.use('/apartamentos', require('./routes/apartamentos'));
+app.use('/manutencoes', require('./routes/manutencoes'));
+app.use('/pagamentos', require('./routes/pagamentos'));
+app.use('/tipos-manutencao', require('./routes/tipos-manutencao'));
+
+// Iniciar servidor
 app.listen(3000, () => {
   console.log('Servidor rodando em http://localhost:3000');
 });
